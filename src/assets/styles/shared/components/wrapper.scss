@@ -1,0 +1,120 @@
+.wrapper {
+  z-index: 1;
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
+
+  .header {
+    height: 60px;
+    z-index: 12001;
+    min-height: auto;
+    background-color: #474747;
+    transition: width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms,
+    margin 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+    box-shadow: none;
+
+    &.active {
+      width: calc(100% - 320px);
+      transition: width 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms,
+      margin 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+      margin-left: 320px;
+    }
+  }
+
+  .open-menu-btn {
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    font-size: 0;
+    display: flex;
+    flex-shrink: 0;
+    min-width: 60px;
+    border-radius: 0;
+    background: #2a2e2e url("/img/auth-page-bg.png") no-repeat center/cover;
+
+    &.hidden {
+      display: none;
+    }
+
+    .menu-icon {
+      fill: #fff;
+      width: 35px;
+      height: 35px;
+    }
+
+    &.hide {
+      display: none;
+    }
+  }
+
+  .search-and-show-menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .search-and-user-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .content {
+    color: #fff;
+    flex-grow: 1;
+    margin-top: 60px;
+    margin-left: 60px;
+    background-color: #f3f3f3;
+  }
+
+  .clever-img {
+    right: -5px;
+    bottom: -5px;
+    position: absolute;
+  }
+}
+
+.warning-modal,.goods-description-modal {
+
+  .description-warning-item {
+    padding: 15px;
+    line-height: 2;
+  }
+}
+
+.send-to-manager-modal {
+  text-align: center;
+
+  .send-to-manager-modal-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .send-to-manager-form {
+    padding: 10px;
+  }
+
+  .input-container {
+    margin-bottom: 20px;
+  }
+
+  .input-style {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .submit-button {
+    @include button(150px);
+    @include success-style-btn;
+
+    &:disabled {
+      @include disabled-button;
+      cursor: not-allowed;
+    }
+  }
+}

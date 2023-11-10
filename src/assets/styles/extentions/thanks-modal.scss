@@ -1,0 +1,62 @@
+.thanks-modal-bg {
+  padding: 40px 0;
+  background: #3e3e3e url("/img/auth-page-bg.png") no-repeat center/cover;
+
+  @media(max-width: 768px) {
+    padding: 0;
+  }
+}
+.thanks-modal-wrap {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  .thanks-modal {
+    color: #fff;
+    display: flex;
+    //max-width: 640px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .title-page {
+    font-size: 60px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 48px;
+    text-transform: uppercase;
+
+    .clover-img {
+      top: -15px;
+      right: -15px;
+      width: 38px;
+      position: absolute;
+    }
+  }
+
+  .short-description {
+    font-size: 16px;
+    line-height: 1.13;
+  }
+
+  .separate {
+    height: 1px;
+    width: 219px;
+    margin: 27px auto;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .button-container {
+    margin: 40px 0;
+  }
+
+  .go-to-platform {
+    @include button(280px, 60px, 30px);
+    background: url("/img/auth-form-bg.png") no-repeat center/cover;
+  }
+
+}

@@ -1,0 +1,105 @@
+.account-info-wrap {
+  color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+
+  .user-info {
+    display: flex;
+    text-align: right;
+    margin-right: 20px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .user-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  .user-email {
+    font-size: 11px;
+  }
+
+  .go-to-dashboard {
+    background-color: #3c3c3c;
+  }
+
+  .log-aut {
+    background-color: #c93f3f;
+  }
+
+  .go-to-dashboard,
+  .log-aut {
+    color: #fff;
+    display: flex;
+    padding: 0 18px;
+    font-size: 14px;
+    font-weight: bold;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    text-transform: uppercase;
+
+    .text {
+      display: none;
+      margin-right: 14px;
+    }
+
+    .icon {
+      width: 18px;
+      fill: white;
+    }
+  }
+
+}
+
+.modal-confirm {
+  background-color: rgba(72, 72, 72, 0.9);
+
+  .modal-confirm-wrap {
+    padding: 25px;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .modal-confirm-title {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .button-container {
+    display: flex;
+    padding: 12px 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-confirm-btn-confirm,
+  .modal-confirm-btn-cancel {
+    padding: 0;
+    margin: 0 2%;
+    min-height: auto;
+    @include button(78px,28px,14px,12px);
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  .modal-confirm-btn-confirm {
+    color: #fff;
+  }
+
+  .modal-confirm-btn-cancel {
+    color: #fff;
+    border-radius: 14px;
+    border: 1px solid transparent;
+  }
+}

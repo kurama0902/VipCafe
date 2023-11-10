@@ -1,0 +1,134 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  box-sizing: border-box;
+  background-color: #3e3e3e;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+}
+
+*{
+  &::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: solid 1px #e8e8e8;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: #484848;
+  }
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote {
+  &:before, &:after {
+    content: none;
+  }
+}
+
+a {
+  display: inline-block;
+}
+
+q {
+  &:before, &:after {
+    content: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  box-sizing: border-box;
+
+  &[type=number]::-webkit-inner-spin-button,
+  &[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  background-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*{
+  outline-color : #3e914d;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0 1000px #e8e8e8 inset;
+
+  &:disabled {
+    border: 1px solid #2a2e2e;
+    -webkit-text-fill-color: #000;
+    -webkit-box-shadow: 0 0 0 1000px lightgrey inset;
+  }
+}
+
+.global-loader {
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.required-field {
+  color: #d24a43;
+}
+
+.pointer-events {
+  pointer-events: none;
+}

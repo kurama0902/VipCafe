@@ -1,0 +1,76 @@
+.all-price-and-buttons {
+  width: 100%;
+  display: flex;
+  color: #fafafa;
+  max-width: 905px;
+  padding-top: 50px;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+
+  .price-wrap {
+    color: #fafafa;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .all-price-wrap,
+  .discount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .discount {
+    margin-bottom: 12px;
+  }
+
+  .discount-text {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .percent {
+    color: #fff;
+    font-size: 10px;
+    margin-left: 5px;
+    padding: 4px 6px;
+    border-radius: 11px;
+    vertical-align: middle;
+    background-color: #c93f3f;
+  }
+
+  .discount-in-euro {
+    font-size: 18px;
+    text-align: right;
+  }
+
+  .all-price-text {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .all-price-number {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+  }
+
+  .clear-btn {
+    @include button(180px,40px,44px,12px,rgba(250, 250, 250, 0.3));
+    border: 1px solid rgba(250, 250, 250, 0.3);
+    margin-right: 20px;
+
+    &:hover {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+
+  .to-order {
+    @include button(240px,40px,44px,12px);
+    @include success-style-btn();
+  }
+
+}

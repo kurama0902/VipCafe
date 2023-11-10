@@ -1,0 +1,42 @@
+#Сжимаем элементы с помощью mod_deflate
+<ifmodule mod_deflate.c="">
+<filesmatch .(js|css|.jpg|.gif|.png|.tiff|.ico)$="">
+SetOutputFilter DEFLATE
+</filesmatch>
+</ifmodule>
+AddDefaultCharset Off
+<IfModule dir_module>
+    DirectoryIndex index.html
+</IfModule>
+
+ErrorDocument 404 /index.html
+
+#Устанавливаем e-mail адрес по-умолчанию для администратора сервера
+ServerSignature EMail
+SetEnv SERVER_ADMIN info@vipkafe.com.ua
+
+#Защищаем .htaccess файл
+<files .htaccess>
+order allow,deny
+deny from all
+</files>
+
+#Усиливаем кеширование
+FileETag MTime Size
+<ifmodule mod_expires.c>
+<filesmatch ".(jpg|gif|png|css|js)$">
+ExpiresActive on
+ExpiresDefault "access plus 1 month"
+</filesmatch>
+</ifmodule>
+
+#Сжимаем компоненты сайта путем включения Gzip
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4.0[678] no-gzip
+BrowserMatch bMSIE !no-gzip !gzip-only-text/html
+
+# сжатие text, html, javascript, css, xml:
+<ifModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>

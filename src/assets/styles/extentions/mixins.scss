@@ -1,0 +1,56 @@
+@mixin button(
+  $width:100%,$height:44px,$radius:22px,$font-size:14px,
+  $color:white,$text-transform: uppercase)
+{
+  width: $width;
+  color: $color;
+  height: $height;
+  display: inline-flex;
+  align-items: center;
+  font-size: $font-size;
+  text-decoration: none;
+  border-radius: $radius;
+  justify-content: center;
+  text-transform: $text-transform;
+}
+
+@mixin success-style-btn {
+  background-image: -webkit-linear-gradient( 140deg, rgb(15,178,246) 0%, rgb(111,162,86) 0%, rgb(146,204,118) 100%);
+}
+
+@mixin standard-style-btn {
+  background: #4c4743 url("../img/auth-form-bg.png") no-repeat center/cover;
+}
+
+@mixin transition($type:all, $duration:.3s,$animation-type:ease) {
+  transition: $type $duration $animation-type;
+}
+
+@mixin disabled-button {
+  &:disabled {
+    background-image: linear-gradient(225deg, #e0d4ef, #f3f2f2);
+    color: #676767;
+    cursor: default;
+  }
+}
+
+@mixin disabled-input {
+  &:disabled {
+    &[type="text"],
+    &[type="password"],
+    &[type="email"] {
+      cursor: default;
+      background-color: #dfd7e8;
+    }
+  }
+}
+
+@mixin error-input {
+  &.validation-error {
+    &[type="text"],
+    &[type="password"],
+    &[type="email"] {
+      box-shadow: 0 0 6px 1px red;
+    }
+  }
+}
